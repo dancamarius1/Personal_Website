@@ -82,9 +82,9 @@ a {
   text-decoration: none;
 }
 
-img {
+/* img {
   display: block;
-}
+} */
 
 h1,
 h2,
@@ -402,29 +402,29 @@ About
 
 .about-img {
   margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
 }
 .about-img img {
   border-radius: var(--radius);
-  object-fit: cover;
-  height: 20rem;
+  max-width: 90vw;
+  height: auto;
+  max-height: 25rem;
 }
 @media screen and (min-width: 992px) {
-  .about-img {
-    margin-bottom: 0;
-  }
-
   .about-center {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
   }
 }
 .about {
   background: var(--clr-white);
   border-radius: var(--radius);
-  display: grid;
-  grid-template-rows: auto 1fr;
+  max-height: 25rem;
+  overflow: auto;
 }
+
 .btn-container {
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
@@ -478,11 +478,82 @@ About
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-around;
+
   margin: 0 auto;
-  max-width: 968px;
-  overflow: hidden;
+  max-width: 1200px;
+  /* overflow: hidden; */
 }
+
+/* ========= */
+.project {
+  width: 100%;
+  margin: 10;
+  padding: 10%;
+  border: 1px hidden;
+  position: relative;
+}
+.project1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+    url(https://images.pexels.com/photos/545331/pexels-photo-545331.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.project1:hover .second {
+  opacity: 1;
+  /* transition: 0.8s; */
+}
+
+.project1:hover .first {
+  opacity: 0;
+}
+
+.first {
+  display: block;
+  position: relative;
+  max-width: 100%;
+}
+
+.second {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #fff;
+}
+
+.project1 .second {
+  opacity: 0;
+  backface-visibility: hidden;
+}
+
+/* ========= */
+.project {
+  width: 300px;
+  max-width: 90vw;
+  height: 375px;
+  max-height: 50vh;
+  margin: 2rem;
+  gap: 2rem;
+}
+
+.project1 {
+  background: url(./images/ecommerce.PNG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.project2 {
+  background: url(./images/weather.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.project3 {
+  background: url(./images/chocolateria.PNG);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+/* to add a media querry to set the ratio for project images */
 
 /* Contact */
 
