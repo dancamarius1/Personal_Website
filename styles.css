@@ -38,12 +38,11 @@ Variables
   --clr-grey-9: hsl(212, 33%, 89%);
   --clr-grey-10: hsl(210, 36%, 96%);
   --clr-white: #fff;
-  --clr-red-dark: hsl(360, 67%, 44%);
-  --clr-red-light: hsl(360, 71%, 66%);
-  --clr-green-dark: hsl(125, 67%, 44%);
-  --clr-green-light: hsl(125, 71%, 66%);
+
   --clr-secondary: hsla(182, 63%, 54%);
   --clr-black: #222;
+  --dark-blue: #1e1b2d;
+  --light-blue: #828092;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
@@ -195,6 +194,7 @@ Scroll
 nav {
   background: var(--clr-white);
   padding: 1rem 1.5rem;
+  z-index: 10;
 }
 /* fixed nav */
 .fixed-nav {
@@ -295,7 +295,7 @@ nav {
     color: var(--clr-white);
   }
 }
-/* hero */
+/* top section  */
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(13, 43, 77, 0.5), rgba(0, 0, 0, 0.7)),
@@ -473,6 +473,7 @@ About
   width: 100%;
 }
 
+/* projects  */
 .projects-div {
   align-items: center;
   display: flex;
@@ -483,63 +484,7 @@ About
   overflow: hidden;
 }
 
-.card {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  flex-flow: column nowrap;
-  height: 375px;
-  justify-content: center;
-  position: relative;
-  width: 300px;
-}
-.card-1 {
-  background: url(http:/unsplash.it/477/520) no-repeat center;
-}
-
-.card-2 {
-  background: url(http:/unsplash.it/405/400) no-repeat center;
-}
-
-.card-3 {
-  background: url(http:/unsplash.it/359/580) no-repeat center;
-}
-
-.card::after {
-  background: rgba(0, 0, 0, 0.7);
-  content: "";
-  height: 100%;
-  /* opacity: 1; */
-  position: absolute;
-  transition: all 300ms ease-in;
-  width: 100%;
-}
-
-.card:hover .card::after,
-.card:hover .project-title,
-.card:hover .project-subtitle {
-  opacity: 1;
-}
-
-.project-title {
-  color: white;
-  display: block;
-  font-size: 20px;
-  font-weight: 600;
-  opacity: 0;
-  padding: 10px 0;
-  z-index: 10;
-}
-
-.project-subtitle {
-  color: white;
-  display: block;
-  font-size: 14px;
-  font-weight: 300;
-  opacity: 0;
-  padding: 10px 0;
-  z-index: 10;
-}
+/* Contact */
 
 .contact {
   display: flex;
